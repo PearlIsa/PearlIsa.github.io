@@ -27,9 +27,10 @@
         }
 
         .side-image {
-            max-width: 650px; /* Adjusted image width */
+            max-width: 650px; /* Make the image responsive */
             max-height: auto; /* Auto-adjust height based on width */
             margin-right: 20px;
+            margin-bottom: 20px;
         }
 
         .tab-container {
@@ -100,13 +101,12 @@
 </head>
 <body>
 <div class="content-container">
-    <img src="/workspaces/PearlIsa.github.io/images/my_content-image.jpg" alt="Ochuwa Pearl Isa" class="side-image">
-    <div class="tab-container">
+<img src="image/my_content-image.jpg" alt="Ochuwa Pearl Isa" class="side-image">    <div class="tab-container">
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'About')">About Pearl</button>
             <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
             <button class="tablinks" onclick="openTab(event, 'Codes')">Codes</button>
-            <button class="tablinks" onclick="openTab(event, 'Certificates')">Education & Certifications</button>
+            <button class="tablinks" onclick="openTab(event, 'Certificates')">Certificates</button>
             <button class="tablinks" onclick="openTab(event, 'CV')">CV</button>
         </div>
 <header>
@@ -141,28 +141,29 @@
 </div>
 <div id="Codes" class="tabcontent">
   <h2>Codes</h2>
-<div class="project1-code">
+    <div class="project-code">
         <h3>Machine Learning Project: Classification of ASD Symptoms</h3>
         <p>This project utilizes machine learning algorithms to classify ASD symptoms in toddlers based on demographic, behavioral, and medical data. </p>
         <a href="path/to/your/Classification_of_Autism_Spectrum_Disorder_ASD_Symptoms_Using_ML.html" target="_blank">View Project Code</a>
     </div>
-    <div class="project2-code">
+    <div class="project-code">
         <h3>Data Analysis Project: Housing Features and Prices</h3>
         <p>An in-depth analysis using R to understand the impact of various features on housing prices. The project showcases data manipulation, visualization, and predictive modeling techniques. </p>
         <a href="path/to/your/r_result_new_code_to_linear_reg_2.html" target="_blank">View Project Code</a>
     </div>
 <div id="Certificates" class="tabcontent">
-  <h2>Education & Certifications</h2>
+  <h2> Certifications</h2>
+<div class=" Certifications"
 <p> MSc Applied Artificial Intelligence and Data Analytics. </p>
     <p> AWS – Udacity AI & ML Scholarship Program – Nanodegree. </p>
     <p> Data Science with R Programming SkillUp by Simplilearn. </p>
     <p> B.Sc. Economics and Statistics University of Benin, Nigeria. </p>
-    </div>
+</div> 
 <div id="CV" class="tabcontent">
   <h2>CV</h2>
-  <div onclick="toggleCVSection('skills-section')" class="cv-header">Skills/Competencies</div>
-    <div id="skills-section" class="cv-section" style="display:none;">
-    <div class="cv-section">
+  <div onclick="toggleCV ('skills-section')" class="cv-header">Skills/Competencies</div>
+    <div id="skills-section" class="CV" style="display:none;">
+    <div class="CV">
         <h3>Skills/Competencies</h3>
         <ul>
             <li>Languages: Proficient in Python, R, SQL; familiar with Scala. </li>
@@ -171,9 +172,9 @@
             <li>Attention to Detail: Strong focus on accuracy, consistency, and clarity in data handling and documentation. </li>
         </ul>
     </div>
-    <div class="cv-section">
-    <div onclick="toggleCVSection('experience-section')" class="cv-header">Professional Experience</div>
-    <div id="experience-section" class="cv-section" style="display:none;">
+    <div class="CV">
+    <div onclick="toggleCV('experience-section')" class="cv-header">Professional Experience</div>
+    <div id="experience-section" class="CV" style="display:none;">
         <h3>Professional Experience</h3>
         <p>Data Scientist | Research and Innovation Services, University of Bradford</p>
         <ul>
@@ -192,6 +193,7 @@
        <li> Innovative Analytics Methodologies: Introduced and championed innovative analytics methodologies, transforming financial data analysis and significantly improving operational insights and decision-making processes. </li>
     </div>
 <script>
+// Your JavaScript code with corrections for function names and consistent handling.
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -206,7 +208,7 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-function toggleCVSection(sectionId) {
+function toggleCV(sectionId) {
     var section = document.getElementById(sectionId);
     if (section.style.display === "none") {
         section.style.display = "block";
@@ -217,5 +219,4 @@ function toggleCVSection(sectionId) {
 </script>
 </body>
 </html>
-
 
