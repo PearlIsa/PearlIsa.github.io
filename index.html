@@ -3,120 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ochuwa Pearl Isa - Data Science Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Ochuwa Pearl Isa's Portfolio</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            scroll-behavior: smooth;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9f9;
+            color: #333;
         }
-        header, section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 50px 20px;
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #99c2cb;
+            background-color: #a3d2ca;
         }
-        header {
-            background: #f9eaf3; /* Light pastel pink background */
-            color: #5a3a4b; /* Darker text for contrast */
-            min-height: 100vh;
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
         }
-        section {
-            min-height: 80vh;
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #7da3a1;
         }
-        .about, .projects, .codes, .education, .cv {
-            <header style="background: url('images/my_background-image.jpg') no-repeat center top; background-size: contain; height: 200px;">
-        /* Additional styling for contrast and readability */
-        .projects, .education, .cv {
-            background-color: rgba(255,255,255,0.8);
-            background-blend-mode: overlay;
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #5e8b89;
+            color: #f4f9f9;
         }
-        h1, h2, h3 {
-            color: #ad5389; /* Pastel purple for headers */
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #99c2cb;
+            border-top: none;
+            animation: fadeEffect 1s; /* Fading effect takes 1 second */
         }
-        p, a {
-            margin: 20px 0;
-color: #555; /* Darker text for better readability */
-            text-decoration: none;
+
+        /* Go from zero to full opacity */
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
+
+        .project, .project-code {
+            background-color: #e7ecef;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        h2, h3 {
+            color: #3a5a40;
+        }
+
+        a {
+            color: #5e8b89;
+        }
+
         a:hover {
-            text-decoration: underline;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-        }
-        nav ul li {
-            margin: 0 10px;
-        }
-        nav ul li a {
-            color: #ad5389;
-            text-decoration: none;
-            font-weight: bold;
+            color: #3a5a40;
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#codes">Codes</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#cv">CV</a></li>
-    </ul>
-</nav>
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'About')">About Pearl</button>
+  <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+  <button class="tablinks" onclick="openTab(event, 'Codes')">Codes</button>
+  <button class="tablinks" onclick="openTab(event, 'Certificates')">Certificates</button>
+  <button class="tablinks" onclick="openTab(event, 'CV')">CV</button>
+</div>
 
 <header>
     <h1>Welcome to my data playground! </h1>
-    <p>I'm <strong>Ochuwa Pearl Isa</strong>, but you can call me Pearl. As a Data Science Enthusiast, I'm passionate about exploring the power of AI and machine learning to create solutions that truly make a difference. Let's>
+    <p>I'm <strong>Ochuwa Pearl Isa</strong>, but you can call me Pearl. As a Data Science Enthusiast, I'm passionate about exploring the power of AI and machine learning to create solutions that truly make a difference. Let's connect and collaborate on exciting projects. </p>
     <p>📧 Email: <a href="mailto:Pearlochisa@gmail.com">Pearlochisa@gmail.com</a></p>
 </header>
+<!-- Tab content -->
+<div id="About" class="tabcontent">
+  <h2>About Pearl</h2>
+   <p> I'm all about diving into new ideas, losing myself in epic tales like The Wheel of Time, The Hobbit and The Lord of the Rings or binge-watching old tv shows from The Big Bang Theory, Criminal Minds to Last Man Standing. </p>
+    <p>Python and R, are my preferred tools for visualization and analysis, using them to solve complex data puzzles. Whether it's creating intuitive AI models or crafting insightful data narratives, I'm always up for a challenge. </p>
+    <p> Data science comprises much more than algorithms to me. I am also committed to responsible AI. I have led workshops for postgraduate researchers and emphasize the importance of using generative AI ethically and in accordance with regulations in academic research. </p>
+   <p> My skill extends to extracting and transforming raw data from sources like Dimensions.ai into compelling insights, showcased through interactive dashboards for stakeholders. I also developed a reinforcement learning model to navigate virtual racetracks, securing 5th place regionally in the AWS DeepRacer competition, demonstrating proficiency in algorithm optimization. </p>
+   <p> My portfolio demonstrates my abilities, featuring projects that range from leveraging machine learning for early ASD diagnosis in toddlers to creating advanced image classifiers with CNNs. These projects highlight my skill in making complex data concepts accessible and engaging through visual storytelling. </p>
+</div>
 
-<section id="about" class="about">
-    <h2>About Pearl</h2>
-    <p> I'm all about diving into new ideas, losing myself in epic tales like The Wheel of Time, The Hobbit and The Lord of the Rings or binge-watching old tv shows from The Big Bang Theory, Criminal Minds to Last Man Standing>
-    <p>Python and R, are my preferred tools for visualization and analysis, using them to solve complex data puzzles. Whether it's creating intuitive AI models or crafting insightful data narratives, I'm always up for a challe>
-    <p> Data science comprises much more than algorithms to me. I am also committed to responsible AI. I have led workshops for postgraduate researchers and emphasize the importance of using generative AI ethically and in acco>
-   <p> My skill extends to extracting and transforming raw data from sources like Dimensions.ai into compelling insights, showcased through interactive dashboards for stakeholders. I also developed a reinforcement learning mod>
-   <p> My portfolio demonstrates my abilities, featuring projects that range from leveraging machine learning for early ASD diagnosis in toddlers to creating advanced image classifiers with CNNs. These projects highlight my sk>
-</section>
-
-<section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project" id="project1">
+<div id="Projects" class="tabcontent">
+  <h2>Projects</h2>
+  <div class="project" id="project1">
         <h3>Classification of Early Autism Spectrum Disorder (ASD) Symptoms in Toddlers Using ML</h3>
-        <p> In this project, I applied Machine Learning (ML) techniques to develop a model capable of classifying early ASD symptoms in toddlers. Utilizing demographic, behavioral, and medical data from the Q-Chat-10 survey, m>
-       <p> I analyzed classification models such as Support Vector Machine (SVM) and Random Forest (RF), leveraging their efficiency and reliability to improve the diagnostic process. This required meticulous data cleaning, fe>
-       <p> I optimized the dataset, by reducing dimensionality to improve model training efficiency. The SVM was selected for its excellence in handling diverse datasets and performing both linear and non-linear classification>
+        <p> In this project, I applied Machine Learning (ML) techniques to develop a model capable of classifying early ASD symptoms in toddlers. Utilizing demographic, behavioral, and medical data from the Q-Chat-10 survey, my objective was to address the critical challenge of early ASD diagnosis, aiming to to accurately distinguish ASD from non-ASD cases, facilitating timely interventions. </p>
+       <p> I analyzed classification models such as Support Vector Machine (SVM) and Random Forest (RF), leveraging their efficiency and reliability to improve the diagnostic process. This required meticulous data cleaning, feature engineering, and the use of ML model development techniques. Throughout this process, continuous learning and adaptation guided my efforts, ensuring the implementation of best practices in ML development, with their performance evaluated based on accuracy, precision, recall, and F1-score metrics. This approach allowed for a detailed assessment of each model's effectiveness, ensuring the selection of the most accurate tool for ASD diagnosis. </p>
+       <p> I optimized the dataset, by reducing dimensionality to improve model training efficiency. The SVM was selected for its excellence in handling diverse datasets and performing both linear and non-linear classifications. Meanwhile, the RF classifier was chosen for its robustness in dealing with complex datasets, enhancing prediction accuracy. The SVM model outperformed the RF model in terms of precision, recall, and overall accuracy. </p>
 
     </div>
     <div class="project" id="project2">
         <h3>Data Analysis for Housing Features and Prices with R</h3>
-        <p>The goal of this project was to use R to analyze the impact of various housing features on sale prices. The dataset included a variety of property information, like the number of rooms, bathrooms, and kitchens, as w>
-       <p>This analysis was based on two predictive models: a linear regression and an XGBoost model. The linear regression model outperformed expectations, with an adjusted R-squared value of 1, indicating that it could expla>
-<p>I used ggplot2 to create histograms and scatter plots, offering visual insights into the model's predictions compared to actual prices. These visual tools confirmed the model's efficacy, with most predicted prices aligning >
- </div>
-</section>
-<section id="codes" class="codes">
-    <h2>Codes</h2>
-    <div class="project-code">
+        <p>The goal of this project was to use R to analyze the impact of various housing features on sale prices. The dataset included a variety of property information, like the number of rooms, bathrooms, and kitchens, as well as specific features like solar power, wood flooring, and security measures. Using R libraries like dplyr, caret, rsq, ggplot2, and ggcorrplot, I performed extensive data pre-processing and analysis to accurately predict housing prices. </p>
+       <p>This analysis was based on two predictive models: a linear regression and an XGBoost model. The linear regression model outperformed expectations, with an adjusted R-squared value of 1, indicating that it could explain 100% of the variance in housing prices. The XGBoost model performed admirably, despite being slightly less accurate. </p>
+<p>I used ggplot2 to create histograms and scatter plots, offering visual insights into the model's predictions compared to actual prices. These visual tools confirmed the model's efficacy, with most predicted prices aligning closely with actual values. </p>
+</div>
+<div id="Codes" class="tabcontent">
+  <h2>Codes</h2>
+<div class="project-code">
         <h3>Machine Learning Project: Classification of ASD Symptoms</h3>
         <p>This project utilizes machine learning algorithms to classify ASD symptoms in toddlers based on demographic, behavioural, and medical data. </p>
         <a href="project-codes/
@@ -127,17 +129,16 @@ Classification_of_Early_Autism_Spectrum_Disorder_ASD_Symptoms_in_Toddlers_Using_
         <p>An in-depth analysis using R to understand the impact of various features on housing prices. The project showcases data manipulation, visualization, and predictive modelling techniques. </p>
         <a href="project-codes/Data_Analysis_for_Housing_Features_and_Prices_with_R.html" target="_blank">View R Data Analysis Project</a>
     </div>
-</section>
-<section id="education" class="education">
-    <h2>Education & Certifications</h2>
-    <p> MSc Applied Artificial Intelligence and Data Analytics. </p>
+<div id="Certificates" class="tabcontent">
+  <h2>Education & Certifications</h2>
+<p> MSc Applied Artificial Intelligence and Data Analytics. </p>
     <p> AWS – Udacity AI & ML Scholarship Program – Nanodegree. </p>
     <p> Data Science with R Programming SkillUp by Simplilearn. </p>
     <p> B.Sc. Economics and Statistics University of Benin, Nigeria. </p>
-</section>
-<section id="cv" class="cv">
-    <h2>CV</h2>
-    <div onclick="toggleCVSection('skills-section')" class="cv-header">Skills/Competencies</div>
+    </div>
+<div id="CV" class="tabcontent">
+  <h2>CV</h2>
+  <div onclick="toggleCVSection('skills-section')" class="cv-header">Skills/Competencies</div>
     <div id="skills-section" class="cv-section" style="display:none;">
     <div class="cv-section">
         <h3>Skills/Competencies</h3>
@@ -169,17 +170,20 @@ Classification_of_Early_Autism_Spectrum_Disorder_ASD_Symptoms_in_Toddlers_Using_
        <li> Innovative Analytics Methodologies: Introduced and championed innovative analytics methodologies, transforming financial data analysis and significantly improving operational insights and decision-making processes. </li>
     </div>
 <script>
-function toggleCVSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    if (section.style.display === "none") {
-        section.style.display = "block";
-    } else {
-        section.style.display = "none";
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
     }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 </script>
-</section>
-
 </body>
 </html>
 
