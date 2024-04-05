@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,18 +18,16 @@
             height: 100vh;
         }
 
-        .content-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            width: 100%;
-            max-width: 1200px;
-        }
-
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* or 'space-around' or 'space-evenly' */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+}
         .side-image {
             max-width: 650px; /* Make the image responsive */
-            max-height: auto; /* Auto-adjust height based on width */
             margin-right: 20px;
             margin-bottom: 20px;
         }
@@ -101,7 +100,7 @@
 </head>
 <body>
 <div class="content-container">
-<img src="image/my_content-image.jpg" alt="Ochuwa Pearl Isa" class="side-image">    <div class="tab-container">
+<img src="image/my_content-image.jpg" alt="Ochuwa Pearl Isa" class="side-image">
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'About')">About Pearl</button>
             <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
@@ -141,31 +140,41 @@
 </div>
 <div id="Codes" class="tabcontent">
   <h2>Codes</h2>
-    <div class="project-code">
-        <h3>Machine Learning Project: Classification of ASD Symptoms</h3>
-        <p>This project utilizes machine learning algorithms to classify ASD symptoms in toddlers based on demographic, behavioral, and medical data. </p>
-        <a href="path/to/your/Classification_of_Autism_Spectrum_Disorder_ASD_Symptoms_Using_ML.html" target="_blank">View Project Code</a>
-    </div>
-    <div class="project-code">
-        <h3>Data Analysis Project: Housing Features and Prices</h3>
-        <p>An in-depth analysis using R to understand the impact of various features on housing prices. The project showcases data manipulation, visualization, and predictive modeling techniques. </p>
-        <a href="path/to/your/r_result_new_code_to_linear_reg_2.html" target="_blank">View Project Code</a>
-    </div>
-<div id="Certificates" class="tabcontent">
-  <h2> Certifications</h2>
-<div class=" Certifications"
-<p> MSc Applied Artificial Intelligence and Data Analytics. </p>
-    <p> AWS – Udacity AI & ML Scholarship Program – Nanodegree. </p>
-    <p> Data Science with R Programming SkillUp by Simplilearn. </p>
-    <p> B.Sc. Economics and Statistics University of Benin, Nigeria. </p>
-</div> 
+  <div class="project-code">
+    <h3>Machine Learning Project: Classification of ASD Symptoms</h3>
+    <p>This project utilizes machine learning algorithms to classify ASD symptoms in toddlers based on demographic, behavioral, and medical data.</p>
+    <a href="path/to/your/Classification_of_Autism_Spectrum_Disorder_ASD_Symptoms_Using_ML.html" target="_blank">View Project Code</a>
+  </div>
+  <div class="project-code">
+    <h3>Data Analysis Project: Housing Features and Prices</h3>
+    <p>An in-depth analysis using R to understand the impact of various features on housing prices. The project showcases data manipulation, visualization, and predictive modeling techniques.</p>
+    <a href="path/to/your/r_result_new_code_to_linear_reg_2.html" target="_blank">View Project Code</a>
+  </div>
+</div><div id="Certificates" class="tabcontent">
+  <h2>Certifications</h2>
+  <div class="certifications">
+    <p>MSc Applied Artificial Intelligence and Data Analytics.</p>
+    <p>AWS – Udacity AI & ML Scholarship Program – Nanodegree.</p>
+    <p>Data Science with R Programming SkillUp by Simplilearn.</p>
+    <p>B.Sc. Economics and Statistics University of Benin, Nigeria.</p>
+  </div>
+</div>
 <div id="CV" class="tabcontent">
   <h2>CV</h2>
-  <div onclick="toggleCV ('skills-section')" class="cv-header">Skills/Competencies</div>
-    <div id="skills-section" class="CV" style="display:none;">
-    <div class="CV">
-        <h3>Skills/Competencies</h3>
-        <ul>
+  <div onclick="toggleCV('skills-section')" class="cv-header">Skills/Competencies</div>
+  <div id="skills-section" class="cv-section" style="display:none;">
+    <h3>Skills/Competencies</h3>
+    <ul>
+      <li>Languages: Proficient in Python, R, SQL; familiar with Scala.</li>
+      <li>Data Analysis: Experienced in machine learning, data visualization, and statistical analysis.</li>
+      <li>Communication: Excellent at articulating complex scientific concepts in a clear, engaging manner.</li>
+      <li>Attention to Detail: Strong focus on accuracy, consistency, and clarity in data handling and documentation.</li>
+    </ul>
+  </div>
+  <div onclick="toggleCV('experience-section')" class="cv-header">Professional Experience</div>
+  <div id="experience-section" class="cv-section" style="display:none;">
+    <h3>Professional Experience</h3>
+    <ul>
             <li>Languages: Proficient in Python, R, SQL; familiar with Scala. </li>
             <li>Data Analysis: Experienced in machine learning, data visualization, and statistical analysis. </li>
             <li>Communication: Excellent at articulating complex scientific concepts in a clear, engaging manner. </li>
@@ -219,4 +228,3 @@ function toggleCV(sectionId) {
 </script>
 </body>
 </html>
-
