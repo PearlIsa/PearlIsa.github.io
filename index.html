@@ -7,8 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e8f5e9; /* Soft green background */
-            color: #333;
+            background-color: #f3e5f5; /* Pastel purple background */
+            color: #000; /* Black font color */
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,34 +17,31 @@
             height: 100vh;
         }
 
-        /* Container to hold both the image and tab content */
         .content-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: flex-start;
             width: 100%;
-            max-width: 1200px; /* Adjust based on preference */
+            max-width: 1200px;
         }
 
-        /* Adjusts image size for the webpage */
         .side-image {
-            max-width: 30%; /* Adjust the width of the image */
-            max-height: 600px; /* Adjust the height as needed */
-            margin-right: 20px; /* Adds some space between image and tabs */
+            max-width: 650px; /* Adjusted image width */
+            max-height: auto; /* Auto-adjust height based on width */
+            margin-right: 20px;
         }
 
-        /* Ensures tabs are aligned next to the image and wrap below on smaller screens */
         .tab-container {
             display: flex;
             flex-direction: column;
-            width: 70%; /* Adjust based on the image width to fill remaining space */
+            width: calc(100% - 650px); /* Adjust based on the image width */
         }
-        /* Blends tab and body background colors for a seamless look */
+
         .tab {
             overflow: hidden;
-            border: 1px solid #b2dfdb; /* Lighter green for a soft contrast */
-            background-color: #a5d6a7; /* Complementary green */
+            border: 1px solid #ce93d8; /* Lighter purple for border */
+            background-color: #ba68c8; /* Deeper purple */
         }
 
         .tab button {
@@ -56,24 +53,24 @@
             padding: 14px 16px;
             transition: 0.3s;
             font-size: 17px;
+            color: #ffffff; /* White text */
         }
 
         .tab button:hover {
-            background-color: #81c784; /* Slightly darker green for hover */
+            background-color: #ab47bc; /* Slightly darker purple on hover */
         }
 
         .tab button.active {
-            background-color: #66bb6a; /* Even darker green for active tab */
-            color: #f4f9f9; /* White text for contrast */
+            background-color: #9c27b0; /* Even darker purple for active tab */
         }
 
         .tabcontent {
             display: none;
             padding: 6px 12px;
-            border: 1px solid #b2dfdb; /* Border color to match the tabs */
+            border: 1px solid #ce93d8; /* Matching border color */
             border-top: none;
-            background-color: #f4f9f9; /* Soft grey background for content */
-            animation: fadeEffect 1s; /* Smooth fade effect for tab change */
+            background-color: #ede7f6; /* Soft purple for content background */
+            animation: fadeEffect 1s;
         }
 
         @keyframes fadeEffect {
@@ -82,40 +79,40 @@
         }
 
         .project, .project-code {
-            background-color: #e0e0e0; /* Light grey for project cards */
+            background-color: #e1bee7; /* Lighter purple for project cards */
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 5px;
         }
 
         h2, h3 {
-            color: #388e3c; /* Dark green for headers */
+            color: #6a1b9a; /* Darker purple for headers */
         }
 
         a {
-            color: #1b5e20; /* Even darker green for links */
+            color: #4a148c; /* Dark purple for links */
         }
 
         a:hover {
-            color: #4caf50; /* Bright green for link hover */
+            color: #7b1fa2; /* Brighter purple for link hover */
         }
     </style>
 </head>
 <body>
 <div class="content-container">
-    <img src="image/my_background-image.jpg" alt="Ochuwa Pearl Isa" class="side-image">
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'About')">About Pearl</button>
-  <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
-  <button class="tablinks" onclick="openTab(event, 'Codes')">Codes</button>
-  <button class="tablinks" onclick="openTab(event, 'Certificates')">Certificates</button>
-  <button class="tablinks" onclick="openTab(event, 'CV')">CV</button>
-</div>
-
+    <img src="/workspaces/PearlIsa.github.io/images/my_content-image.jpg" alt="Ochuwa Pearl Isa" class="side-image">
+    <div class="tab-container">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'About')">About Pearl</button>
+            <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+            <button class="tablinks" onclick="openTab(event, 'Codes')">Codes</button>
+            <button class="tablinks" onclick="openTab(event, 'Certificates')">Education & Certifications</button>
+            <button class="tablinks" onclick="openTab(event, 'CV')">CV</button>
+        </div>
 <header>
     <h1>Welcome to my data playground! </h1>
     <p>I'm <strong>Ochuwa Pearl Isa</strong>, but you can call me Pearl. As a Data Science Enthusiast, I'm passionate about exploring the power of AI and machine learning to create solutions that truly make a difference. Let's connect and collaborate on exciting projects. </p>
-    <p>�� Email: <a href="mailto:Pearlochisa@gmail.com">Pearlochisa@gmail.com</a></p>
+    <p>📧 Email: <a href="mailto:Pearlochisa@gmail.com">Pearlochisa@gmail.com</a></p>
 </header>
 <!-- Tab content -->
 <div id="About" class="tabcontent">
@@ -146,14 +143,13 @@
   <h2>Codes</h2>
 <div class="project1-code">
         <h3>Machine Learning Project: Classification of ASD Symptoms</h3>
-        <p>This project utilizes machine learning algorithms to classify ASD symptoms in toddlers based on demographic, behavioural, and medical data. </p>
-        <a href="project-codes/
-Classification_of_Early_Autism_Spectrum_Disorder_ASD_Symptoms_in_Toddlers_Using_ML.html" target="_blank">View ML Project</a>
+        <p>This project utilizes machine learning algorithms to classify ASD symptoms in toddlers based on demographic, behavioral, and medical data. </p>
+        <a href="path/to/your/Classification_of_Autism_Spectrum_Disorder_ASD_Symptoms_Using_ML.html" target="_blank">View Project Code</a>
     </div>
     <div class="project2-code">
         <h3>Data Analysis Project: Housing Features and Prices</h3>
-        <p>An in-depth analysis using R to understand the impact of various features on housing prices. The project showcases data manipulation, visualization, and predictive modelling techniques. </p>
-        <a href="project-codes/Data_Analysis_for_Housing_Features_and_Prices_with_R.html" target="_blank">View R Data Analysis Project</a>
+        <p>An in-depth analysis using R to understand the impact of various features on housing prices. The project showcases data manipulation, visualization, and predictive modeling techniques. </p>
+        <a href="path/to/your/r_result_new_code_to_linear_reg_2.html" target="_blank">View Project Code</a>
     </div>
 <div id="Certificates" class="tabcontent">
   <h2>Education & Certifications</h2>
