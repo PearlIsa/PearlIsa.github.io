@@ -12,63 +12,36 @@
             font-family: 'Roboto', sans-serif;
             scroll-behavior: smooth;
         }
-        header, section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 50px 20px;
-        }
         header {
-            background: #f9eaf3; /* Light pastel pink background */
-            color: #5a3a4b; /* Darker text for contrast */
-            min-height: 100vh;
+            background: #f9eaf3;
+            color: #5a3a4b;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
         }
         section {
-            min-height: 80vh;
-        }
-        .about, .projects, .codes, .education, .cv {
-            background: url('images/my_background-image.jpg') no-repeat center center/cover; /* Example background image */
-        }
-        /* Additional styling for contrast and readability */
-        .projects, .education, .cv {
-            background-color: rgba(255,255,255,0.8);
-            background-blend-mode: overlay;
-        }
-        h1, h2, h3 {
-            color: #ad5389; /* Pastel purple for headers */
-        }
-        p, a {
+            padding: 20px;
             margin: 20px 0;
-            color: #555; /* Darker text for better readability */
-            text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
+        .cv-section, .cv-header {
+            margin: 10px 0;
         }
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 1000;
+        .cv-section {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 0;
+        .cv-header {
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
         }
-        nav ul li {
-            margin: 0 10px;
-        }
-        nav ul li a {
-            color: #ad5389;
-            text-decoration: none;
-            font-weight: bold;
+        @media (max-width: 768px) {
+            header, section {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -83,7 +56,6 @@
         <li><a href="#cv">CV</a></li>
     </ul>
 </nav>
-
 <header>
     <h1>Welcome to my data playground! </h1>
     <p>I'm <strong>Ochuwa Pearl Isa</strong>, but you can call me Pearl. As a Data Science Enthusiast, I'm passionate about exploring the power of AI and machine learning to create solutions that truly make a difference. Let's connect and collaborate on exciting projects. </p>
@@ -139,30 +111,51 @@ Classification_of_Early_Autism_Spectrum_Disorder_ASD_Symptoms_in_Toddlers_Using_
     <p> B.Sc. Economics and Statistics University of Benin, Nigeria. </p>
 
 </section>
-
 <section id="cv" class="cv">
     <h2>CV</h2>
-    <p> Skills/Competencies
-• Languages: Proficient in Python, R, SQL; familiar with Scala.
-• Data Analysis: Experienced in machine learning, data visualization, and statistical analysis.
-• Communication: Excellent at articulating complex scientific concepts in a clear, engaging manner.
-• Attention to Detail: Strong focus on accuracy, consistency, and clarity in data handling and documentation.
-Professional Experience
-Data Scientist | Research and Innovation Services, University of Bradford 			
-• AI and Machine Learning Projects: Led projects focused on machine learning model development for early diagnosis of ASD using Python, showcasing deep understanding of AI capabilities and limitations.
-• Data Optimization and Analysis: Excelled in data mining using Python and the Dimensions API, improving research data analysis and publication benchmarking, aligning with Outlier’s focus on data problem-solving and efficiency.
-• Advanced Data Visualization: Utilized R Studio and Shiny for insightful data analysis and visualization, relevant to Outlier’s need for clear data presentation and AI model training support.
-
-Projects:
-• ASD Identification with Python: Utilized machine learning to differentiate toddlers with and without autism spectrum disorder (ASD), employing various algorithms for early diagnosis and intervention.
-• Image Classification with Python: Leveraged convolutional neural networks (CNNs) to classify dog breeds and flower types, showcasing advanced image recognition capabilities for digital categorization.
-• Housing Price Prediction Using R: Analysed housing market data to forecast prices using R and ggplot2, comparing linear regression and Xgboost models to pinpoint key market predictors.
-• AWS DeepRacer Reinforcement Learning: Developed a reinforcement learning model to navigate virtual racetracks, securing 5th place regionally in the AWS DeepRacer competition, demonstrating proficiency in algorithm optimization.
-Financial Analytics Manager | H & W Energy 						
-• Financial Strategy Leadership: Directed the financial planning and analytics framework, integrating budgets, procurement, and strategic planning to drive financial stability and growth.
-• Innovative Analytics Methodologies: Introduced and championed innovative analytics methodologies, transforming financial data analysis and significantly improving operational insights and decision-making processes. </p>
-</section>
-
+    <div onclick="toggleCVSection('skills-section')" class="cv-header">Skills/Competencies</div>
+    <div id="skills-section" class="cv-section" style="display:none;">
+    <div class="cv-section">
+        <h3>Skills/Competencies</h3>
+        <ul>
+            <li>Languages: Proficient in Python, R, SQL; familiar with Scala. </li>
+            <li>Data Analysis: Experienced in machine learning, data visualization, and statistical analysis. </li>
+            <li>Communication: Excellent at articulating complex scientific concepts in a clear, engaging manner. </li>
+            <li>Attention to Detail: Strong focus on accuracy, consistency, and clarity in data handling and documentation. </li>
+        </ul>
+    </div>
+    <div class="cv-section">
+    <div onclick="toggleCVSection('experience-section')" class="cv-header">Professional Experience</div>
+    <div id="experience-section" class="cv-section" style="display:none;">
+        <h3>Professional Experience</h3>
+        <p>Data Scientist | Research and Innovation Services, University of Bradford</p>
+        <ul>
+            <li>AI and Machine Learning Projects: Led projects focused on machine learning model development for early diagnosis of ASD using Python, showcasing deep understanding of AI capabilities and limitations. </li>
+            <li> Data Optimization and Analysis: Excelled in data mining using Python and the Dimensions API, improving research data analysis and publication benchmarking, aligning with Outlier’s focus on data problem-solving and efficiency. </li>
+            <li> Advanced Data Visualization: Utilized R Studio and Shiny for insightful data analysis and visualization, relevant to Outlier’s need for clear data presentation and AI model training support. </li>
+          <h3> Projects </h3>
+          <ul>
+          <li> ASD Identification with Python: Utilized machine learning to differentiate toddlers with and without autism spectrum disorder (ASD), employing various algorithms for early diagnosis and intervention. </li>
+          <li> Image Classification with Python: Leveraged convolutional neural networks (CNNs) to classify dog breeds and flower types, showcasing advanced image recognition capabilities for digital categorization. </li>
+          <li> Housing Price Prediction Using R: Analysed housing market data to forecast prices using R and ggplot2, comparing linear regression and Xgboost models to pinpoint key market predictors. </li>
+          <li> AWS DeepRacer Reinforcement Learning: Developed a reinforcement learning model to navigate virtual racetracks, securing 5th place regionally in the AWS DeepRacer competition, demonstrating proficiency in algorithm optimization. </li>
+       <h3> Financial Analytics Manager | H & W Energy </h3>     
+       </ul>
+       <li> Financial Strategy Leadership: Directed the financial planning and analytics framework, integrating budgets, procurement, and strategic planning to drive financial stability and growth. </li>
+       <li> Innovative Analytics Methodologies: Introduced and championed innovative analytics methodologies, transforming financial data analysis and significantly improving operational insights and decision-making processes. </li>
+    </div>
+<script>
+function toggleCVSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section.style.display === "none") {
+        section.style.display = "block";
+    } else {
+        section.style.display = "none";
+    }
+}
+</script>
 </body>
 </html>
+
+
 
