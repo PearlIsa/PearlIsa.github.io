@@ -1,230 +1,267 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pearl's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.code-block {
+				white-space: pre;
+				overflow-x: auto;
+				/*background-color: #f8f8f8;*/
+				padding: 10px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+			</style>
+			
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ochuwa Pearl Isa's Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3e5f5; /* Pastel purple background */
-            color: #000; /* Black font color */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-        }
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo" style="text-align: center;"><a href="index.html">Landed</a></h1>
+					<!--  <nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Layouts</a>
+								<ul>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#" class="button primary">Sign Up</a></li>
+						</ul>
+					</nav>  --> 
+				</header>
 
-.content-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* or 'space-around' or 'space-evenly' */
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-}
-        .side-image {
-            max-width: 650px; /* Make the image responsive */
-            margin-right: 20px;
-            margin-bottom: 20px;
-        }
+			<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Pearl's Data Playground</h2>
+							<p>Data Scientist well versed in Python, R, and Data Visualization.<br />
+							</p>
+						</header>
+						<span class="image"><img src="images/picme.jpg" alt="" /></span>
+					</div>
+					<a href="#one" class="goto-next scrolly">Next</a>
+				</section>
 
-        .tab-container {
-            display: flex;
-            flex-direction: column;
-            width: calc(100% - 650px); /* Adjust based on the image width */
-        }
+			<!-- One -->
+				<section id="one" class="spotlight style1 bottom">
+					<span class="image fit main"><img src="images/AdobeStock1.jpg" alt="" /></span>
+					<div class="content">
+						<div class="container">
+							<div class="row">
+								<div class="col-4 col-12-medium">
+									<header>
+										<h2>Welcome!</h2>
+										<p>
+									</header>
+								</div>
+								<div class="col-4 col-12-medium" style="text-align:left;">
+									<p>As a passionate Data Scientist, I am dedicated to advancing artificial intelligence and machine learning. 
+									My portfolio showcases my commitment to solving complex data challenges, from optimizing AI models for code generation
+									to insightful data science writing. I have conducted workshops for postgraduate researchers on the ethical implications 
+									of generative AI, emphasizing responsible innovation.
+									
 
-        .tab {
-            overflow: hidden;
-            border: 1px solid #ce93d8; /* Lighter purple for border */
-            background-color: #ba68c8; /* Deeper purple */
-        }
+									Explore my projects to see my journey in machine learning model development, including early ASD diagnosis, image classification
+									using CNNs, and fine-tuning a reinforcement learning model for AWS DeepRacer, where I secured a 5th place regional ranking. 
+									Additionally, I developed and optimized machine learning models for predicting used car prices, achieving the lowest RMSE with 
+									a Gradient Boosting Regressor for the KaggleX Skill Assessment Challenge and House prices prediction.
+									
 
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-            color: #ffffff; /* White text */
-        }
+									Each project highlights my meticulous analysis, precision in AI solutions, and ability to clearly communicate sophisticated data concepts.
+									Let's connect and share our enthusiasm for the transformative power and ethical practice of data science.
+									 
+									
+									Let's connect and share our enthusiasm for the transformative power and ethical practice of data science.</p>
+									
+								</div>
+								<div class="col-4 col-12-medium">
+									<p>
+							</div>
+						</div>
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</section>
 
-        .tab button:hover {
-            background-color: #ab47bc; /* Slightly darker purple on hover */
-        }
+			<!-- Two -->
+				<section id="two" class="spotlight style2 right">
+					<span class="image fit main"><img src="images/Asd_2.jpg" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2 style="text-align: center;">Autism Spectrum Disorder (ASD) in toddlers</h2>
+						</header>
+						<p style="text-align:left;">
+						In this above project, I used machine learning to help identify Autism Spectrum Disorder (ASD) in toddlers based on data from 
+						a Q-Chat-10 survey. The goal was to improve early diagnosis and support timely intervention. 
+						Using the Design Science Research Methodology (DSRM), I developed a model that classifies toddlers as 
+						having ASD symptoms or not, based on their responses to specific questions and demographic information.
+					</p>
+					<p style="text-align:left;">
+						To understand which features were most important for the model, 
+						I created a bar chart showing the significance of each feature. 
+						Here's a quick rundown of the top predictors:
+					</p>
+					<ul style="text-align:left;">
+						<li><strong>A2 (Most Important):</strong> Whether the child points to show things.</li>
+						<li><strong>A9:</strong> Whether the child looks at the speaker's mouth when they talk.</li>
+						<li><strong>A7 & A8:</strong> Whether the child uses simple gestures like waving or nodding, and whether they copy words or sounds spontaneously.</li>
+						<li><strong>A4:</strong> Whether the child shows interest in other children.</li>
+						<li><strong>A6:</strong> Whether the child plays with toys functionally.</li>
+						<li><strong>A5:</strong> Whether the child demonstrates imaginative play.</li>
+						<li><strong>A1:</strong> Whether the child responds to their name being called.</li>
+					</ul>
+					<p>
+						By highlighting these key features, my model aims to provide valuable insights into early ASD detection, potentially making a significant impact on children's lives.
+					</p>
+					<p>
+						For more details on the code and visuals, <a href="https://github.com/PearlIsa/DataSciencePortfolio/blob/main/ML/Classification%20of%20Autism%20Spectrum%20Disorder%20(ASD)%20Symptoms%20Using%20ML.ipynb"target="_blank">click here to visit my GitHub repository</a>.
+					</p>
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</section>
 
-        .tab button.active {
-            background-color: #9c27b0; /* Even darker purple for active tab */
-        }
+			<!-- Three -->
+				<section id="three" class="spotlight style3 left">
+					<span class="image fit main bottom"><img src="images/deepracer1.jpg" alt="" /></span>
+					<div class="content">
+						<header>
+							</ul><h2>AW-Deep-Racer-Student-League</h2>
+							<p style="text-align: left;">The AWS DeepRacer Student League is where you compete for the fastest lap times with friends, 
+							training a reinforcement learning (RL) model and see a simulation of how that model performs on a track.</p>
+						</header >
+						</ul>
+						<p style="text-align: left;">This project includes a reward function used in training an autonomous car with reinforcement learning. 
+						The function rewards the car based on its proximity to the center of the track, with higher rewards for 
+						staying closer to the center. Here's a brief overview of how the function works:</p>
 
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ce93d8; /* Matching border color */
-            border-top: none;
-            background-color: #ede7f6; /* Soft purple for content background */
-            animation: fadeEffect 1s;
-        }
+						<ul style="text-align:left;">
+							<li>The track width and distance from the center are read from the input parameters.</li>
+							<li>Three markers are calculated at varying distances from the center line (10%, 25%, and 50% of the track width).</li>
+							<li>The car receives the highest reward if it stays within the first marker, a lower reward if within the second marker, and the lowest reward if within the third marker.</li>
+							<li>If the car is beyond the third marker, it receives a minimal reward, indicating it's likely off track or crashed.</li>
+						</ul>
+						<p style="text-align: left;">For more details on the code and visuals on my models performance, visit my <a href="https://github.com/PearlIsa/AW-Deep-Racer-Student-League/blob/main/AWS%20DEEP%20RACER%20CODE.ipynb" target="_blank">GitHub repository</a>.</p>
 
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
+						</ul>
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</section>
 
-        .project, .project-code {
-            background-color: #e1bee7; /* Lighter purple for project cards */
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
+			<!-- 
+				<section id="four" class="wrapper style1 special fade-up">
+					<div class="container">
+						<header class="major">
+							<h2>Accumsan sed tempus adipiscing blandit</h2>
+							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
+						</header>
+						<div class="box alt">
+							<div class="row gtr-uniform">
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-chart-area"></span>
+									<h3>Ipsum sed commodo</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-comment"></span>
+									<h3>Eleifend lorem ornare</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-flask"></span>
+									<h3>Cubilia cep lobortis</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-paper-plane"></span>
+									<h3>Non semper interdum</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-file"></span>
+									<h3>Odio laoreet accumsan</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-lock"></span>
+									<h3>Massa arcu accumsan</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+							</div>
+						</div>
+						<footer class="major">
+							<ul class="actions special">
+								<li><a href="#" class="button">Magna sed feugiat</a></li>
+							</ul>
+						</footer>
+					</div>
+				</section>Four -->
 
-        h2, h3 {
-            color: #6a1b9a; /* Darker purple for headers */
-        }
+			<!--
+				<section id="five" class="wrapper style2 special fade">
+					<div class="container">
+						<header>
+							<h2>Magna faucibus lorem diam</h2>
+							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
+						</header>
+						<form method="post" action="#" class="cta">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
+							</div>
+						</form>
+					</div>
+				</section> Five -->
 
-        a {
-            color: #4a148c; /* Dark purple for links */
-        }
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://twitter.com/pearlnoyster" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.linkedin.com/in/ochuwa-pearl-753739a5/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/PearlIsa" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:pearlochisa@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
 
-        a:hover {
-            color: #7b1fa2; /* Brighter purple for link hover */
-        }
-    </style>
-</head>
-<body>
-<div class="content-container">
-<img src="image/my_content-image.jpg" alt="Ochuwa Pearl Isa" class="side-image">
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'About')">About Pearl</button>
-            <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
-            <button class="tablinks" onclick="openTab(event, 'Codes')">Codes</button>
-            <button class="tablinks" onclick="openTab(event, 'Certificates')">Certificates</button>
-            <button class="tablinks" onclick="openTab(event, 'CV')">CV</button>
-        </div>
-<header>
-    <h1>Welcome to my data playground! </h1>
-    <p>I'm <strong>Ochuwa Pearl Isa</strong>, but you can call me Pearl. As a Data Science Enthusiast, I'm passionate about exploring the power of AI and machine learning to create solutions that truly make a difference. Let's connect and collaborate on exciting projects. </p>
-    <p>📧 Email: <a href="mailto:Pearlochisa@gmail.com">Pearlochisa@gmail.com</a></p>
-</header>
-<!-- Tab content -->
-<div id="About" class="tabcontent">
-  <h2>About Pearl</h2>
-   <p> I'm love exploring new ideas, losing myself in epic tales like The Wheel of Time, The Hobbit and The Lord of the Rings or binge-watching old tv shows from The Big Bang Theory, Criminal Minds to Last Man Standing. </p>
-    <p>Python and R, are my preferred tools for visualization and analysis, using them to solve complex data puzzles. Whether it's creating intuitive AI models or crafting insightful data narratives, I'm always up for a challenge. </p>
-    <p> Data science is much more than algorithms to me. I am also committed to responsible AI. I have led workshops for postgraduate researchers and emphasize the importance of using generative AI ethically and in accordance with regulations in academic research. </p>
-   <p> My skill extends to extracting and transforming raw data from sources like Dimensions.ai into compelling insights, showcased through interactive dashboards for stakeholders. I also developed a reinforcement learning model to navigate virtual racetracks, securing 5th place regionally in the AWS DeepRacer competition, demonstrating proficiency in algorithm optimization. </p>
-   <p> My portfolio demonstrates my abilities, featuring projects that range from leveraging machine learning for early ASD diagnosis in toddlers to creating advanced image classifiers with CNNs. These projects highlight my skill in making complex data concepts accessible and engaging through visual storytelling. </p>
-</div>
+		</div>
 
-<div id="Projects" class="tabcontent">
-  <h2>Projects</h2>
-  <div class="project" id="project1">
-        <h3>Classification of Early Autism Spectrum Disorder (ASD) Symptoms in Toddlers Using ML</h3>
-        <p> In this project, I applied Machine Learning (ML) techniques to develop a model capable of classifying early ASD symptoms in toddlers. Utilizing demographic, behavioral, and medical data from the Q-Chat-10 survey, my objective was to address the critical challenge of early ASD diagnosis, aiming to to accurately distinguish ASD from non-ASD cases, facilitating timely interventions. </p>
-       <p> I analyzed classification models such as Support Vector Machine (SVM) and Random Forest (RF), leveraging their efficiency and reliability to improve the diagnostic process. This required meticulous data cleaning, feature engineering, and the use of ML model development techniques. Throughout this process, continuous learning and adaptation guided my efforts, ensuring the implementation of best practices in ML development, with their performance evaluated based on accuracy, precision, recall, and F1-score metrics. This approach allowed for a detailed assessment of each model's effectiveness, ensuring the selection of the most accurate tool for ASD diagnosis. </p>
-       <p> I optimized the dataset, by reducing dimensionality to improve model training efficiency. The SVM was selected for its excellence in handling diverse datasets and performing both linear and non-linear classifications. Meanwhile, the RF classifier was chosen for its robustness in dealing with complex datasets, enhancing prediction accuracy. The SVM model outperformed the RF model in terms of precision, recall, and overall accuracy. </p>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-    </div>
-    <div class="project" id="project2">
-        <h3>Data Analysis for Housing Features and Prices with R</h3>
-        <p>The goal of this project was to use R to analyze the impact of various housing features on sale prices. The dataset included a variety of property information, like the number of rooms, bathrooms, and kitchens, as well as specific features like solar power, wood flooring, and security measures. Using R libraries like dplyr, caret, rsq, ggplot2, and ggcorrplot, I performed extensive data pre-processing and analysis to accurately predict housing prices. </p>
-       <p>This analysis was based on two predictive models: a linear regression and an XGBoost model. The linear regression model outperformed expectations, with an adjusted R-squared value of 1, indicating that it could explain 100% of the variance in housing prices. The XGBoost model performed admirably, despite being slightly less accurate. </p>
-<p>I used ggplot2 to create histograms and scatter plots, offering visual insights into the model's predictions compared to actual prices. These visual tools confirmed the model's efficacy, with most predicted prices aligning closely with actual values. </p>
-</div>
-<div id="Codes" class="tabcontent">
-  <h2>Codes</h2>
-  <div class="project-code">
-    <h3>Machine Learning Project: Classification of ASD Symptoms</h3>
-    <p>This project utilizes machine learning algorithms to classify ASD symptoms in toddlers based on demographic, behavioral, and medical data.</p>
-    <a href="path/to/your/Classification_of_Autism_Spectrum_Disorder_ASD_Symptoms_Using_ML.html" target="_blank">View Project Code</a>
-  </div>
-  <div class="project-code">
-    <h3>Data Analysis Project: Housing Features and Prices</h3>
-    <p>An in-depth analysis using R to understand the impact of various features on housing prices. The project showcases data manipulation, visualization, and predictive modeling techniques.</p>
-    <a href="path/to/your/r_result_new_code_to_linear_reg_2.html" target="_blank">View Project Code</a>
-  </div>
-</div><div id="Certificates" class="tabcontent">
-  <h2>Certifications</h2>
-  <div class="certifications">
-    <p>MSc Applied Artificial Intelligence and Data Analytics.</p>
-    <p>AWS – Udacity AI & ML Scholarship Program – Nanodegree.</p>
-    <p>Data Science with R Programming SkillUp by Simplilearn.</p>
-    <p>B.Sc. Economics and Statistics University of Benin, Nigeria.</p>
-  </div>
-</div>
-<div id="CV" class="tabcontent">
-  <h2>CV</h2>
-  <div onclick="toggleCV('skills-section')" class="cv-header">Skills/Competencies</div>
-  <div id="skills-section" class="cv-section" style="display:none;">
-    <h3>Skills/Competencies</h3>
-    <ul>
-      <li>Languages: Proficient in Python, R, SQL; familiar with Scala.</li>
-      <li>Data Analysis: Experienced in machine learning, data visualization, and statistical analysis.</li>
-      <li>Communication: Excellent at articulating complex scientific concepts in a clear, engaging manner.</li>
-      <li>Attention to Detail: Strong focus on accuracy, consistency, and clarity in data handling and documentation.</li>
-    </ul>
-  </div>
-  <div onclick="toggleCV('experience-section')" class="cv-header">Professional Experience</div>
-  <div id="experience-section" class="cv-section" style="display:none;">
-    <h3>Professional Experience</h3>
-    <ul>
-            <li>Languages: Proficient in Python, R, SQL; familiar with Scala. </li>
-            <li>Data Analysis: Experienced in machine learning, data visualization, and statistical analysis. </li>
-            <li>Communication: Excellent at articulating complex scientific concepts in a clear, engaging manner. </li>
-            <li>Attention to Detail: Strong focus on accuracy, consistency, and clarity in data handling and documentation. </li>
-        </ul>
-    </div>
-    <div class="CV">
-    <div onclick="toggleCV('experience-section')" class="cv-header">Professional Experience</div>
-    <div id="experience-section" class="CV" style="display:none;">
-        <h3>Professional Experience</h3>
-        <p>Data Scientist | Research and Innovation Services, University of Bradford</p>
-        <ul>
-            <li>AI and Machine Learning Projects: Led projects focused on machine learning model development for early diagnosis of ASD using Python, showcasing deep understanding of AI capabilities and limitations. </li>
-            <li> Data Optimization and Analysis: Excelled in data mining using Python and the Dimensions API, improving research data analysis and publication benchmarking, aligning with Outlier’s focus on data problem-solving and efficiency. </li>
-            <li> Advanced Data Visualization: Utilized R Studio and Shiny for insightful data analysis and visualization, relevant to Outlier’s need for clear data presentation and AI model training support. </li>
-          <h3> Projects </h3>
-          <ul>
-          <li> ASD Identification with Python: Utilized machine learning to differentiate toddlers with and without autism spectrum disorder (ASD), employing various algorithms for early diagnosis and intervention. </li>
-          <li> Image Classification with Python: Leveraged convolutional neural networks (CNNs) to classify dog breeds and flower types, showcasing advanced image recognition capabilities for digital categorization. </li>
-          <li> Housing Price Prediction Using R: Analysed housing market data to forecast prices using R and ggplot2, comparing linear regression and Xgboost models to pinpoint key market predictors. </li>
-          <li> AWS DeepRacer Reinforcement Learning: Developed a reinforcement learning model to navigate virtual racetracks, securing 5th place regionally in the AWS DeepRacer competition, demonstrating proficiency in algorithm optimization. </li>
-       <h3> Financial Analytics Manager | H & W Energy </h3>     
-       </ul>
-       <li> Financial Strategy Leadership: Directed the financial planning and analytics framework, integrating budgets, procurement, and strategic planning to drive financial stability and growth. </li>
-       <li> Innovative Analytics Methodologies: Introduced and championed innovative analytics methodologies, transforming financial data analysis and significantly improving operational insights and decision-making processes. </li>
-    </div>
-<script>
-// Your JavaScript code with corrections for function names and consistent handling.
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-function toggleCV(sectionId) {
-    var section = document.getElementById(sectionId);
-    if (section.style.display === "none") {
-        section.style.display = "block";
-    } else {
-        section.style.display = "none";
-    }
-}
-</script>
-</body>
+	</body>
 </html>
