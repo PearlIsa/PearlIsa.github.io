@@ -20,48 +20,7 @@
 				border: 1px solid #ccc;
 				border-radius: 4px;
 			}
-
-			/* Tab content */
-			.tab-content {
-            display: none;
-            padding: 6px 12px;
-            border-top: none;
-        }
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-        }
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
-        }
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #ccc;
-        }
-			</style>
-			<script>
-				function openProject(evt, projectName) {
-					var i, tabcontent, tablinks;
-					tabcontent = document.getElementsByClassName("tab-content");
-					for (i = 0; i < tabcontent.length; i++) {
-						tabcontent[i].style.display = "none";
-					}
-					tablinks = document.getElementsByClassName("tablinks");
-					for (i = 0; i < tablinks.length; i++) {
-						tablinks[i].className = tablinks[i].className.replace(" active", "");
-					}
-					document.getElementById(projectName).style.display = "block";
-					evt.currentTarget.className += " active";
-				}
-			</script>
-			
+		</style>
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
@@ -141,12 +100,6 @@
 									
 								</div>
 								<div class="col-4 col-12-medium">
-								 <!-- Tab links -->
-								 <div class="tab">
-									<button class="tablinks" onclick="openProject(event, 'CABS')">CABS Report</button>
-									<button class="tablinks" onclick="openProject(event, 'ASD')">ASD Project</button>
-									<button class="tablinks" onclick="openProject(event, 'DeepRacer')">DeepRacer</button>
-									
 								</div>	
 							</div>
 						</div>
@@ -157,6 +110,7 @@
 			<!-- Two -->
 				<section id="two" class="spotlight style2 right">
 					<span class="image fit main bottom"><img src="images/dashboard1.jpg" alt="" /></span>
+
 					<div class="content">
 						<header>
 							<h2>CABS Report for the School of Management</h2>
@@ -250,6 +204,9 @@
 						<p style="text-align: left;">
 							For a detailed view of the code and to explore the dashboard, please visit the <a href="https://github.com/PearlIsa/CABS-Report-for-the-School-of-Management/tree/main" target="_blank">GitHub repository</a>.
 						</p>
+
+
+							
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
