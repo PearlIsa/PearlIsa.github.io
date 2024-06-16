@@ -21,6 +21,51 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
+        /* Tab styles */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+
+        .tabcontent.show {
+            display: block;
+        }
+
+        /* Custom link styles */
+        a {
+            color: #0066cc; /* Change to a color with good contrast */
+            font-weight: bold; /* Make the font bold */
+        }
+
+        a:hover {
+            color: #004080; /* Darker shade for hover state */
+        }
     </style>
 </head>
 <body class="is-preload landing">
@@ -30,8 +75,8 @@
         <header id="header">
             <h1 id="logo" style="text-align: center;"><a href="index.html">Ochuwa Pearl Isa's Portfolio</a></h1>
             <nav id="nav">
-                					<!--  <nav id="nav">
-				<ul>
+                <!--  <nav id="nav">
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li>
                         <a href="#">Layouts</a>
@@ -51,320 +96,254 @@
                         </ul>
                     </li>
                 </ul>
-				</nav>  --> 
+                </nav>  --> 
             </nav>
 
         </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <header>
+                    <h2>Pearl's Data Playground</h2>
+                    <p>Data Scientist well versed in Python, R, and Data Visualization.<br />
+                    </p>
+                </header>
+                <span class="image"><img src="images/picme.jpg" alt="" /></span>
+            </div>
+            <a href="#one" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- One -->
+        <section id="one" class="spotlight style1 bottom">
+            <span class="image fit main"><img src="images/AdobeStock1.jpg" alt="" /></span>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 col-12-medium">
+                            <header>
+                                <h2 style="text-align: center;">Welcome!</h2>
+                            </header>
+                        </div>
+                        <div class="col-8 col-12-medium">
+                            <p style="text-align: left;">As a passionate Data Scientist, I am dedicated to advancing artificial intelligence and machine learning. 
+                            My portfolio showcases my commitment to solving complex data challenges, from optimizing AI models for code generation
+                            to insightful data science writing. I have conducted workshops for postgraduate researchers on the ethical implications 
+                            of generative AI, emphasizing responsible innovation.</p>
+                        
+                            <p style="text-align:left;">Explore my projects to see my journey in machine learning model development, including early ASD diagnosis, image classification
+                            using CNNs, and fine-tuning a reinforcement learning model for AWS DeepRacer, where I secured a 5th place regional ranking. 
+                            Additionally, I developed and optimized machine learning models for predicting used car prices, achieving the lowest RMSE with 
+                            a Gradient Boosting Regressor for the KaggleX Skill Assessment Challenge and House prices prediction.</p>
+                            
+                            <p style="text-align:left;">Each project highlights my meticulous analysis, precision in AI solutions, and ability to clearly communicate sophisticated data concepts.
+                            Let's connect and share our enthusiasm for the transformative power and ethical practice of data science.</p>
+                            
+                            <p style="text-align:left;">Let's connect and share our enthusiasm for the transformative power and ethical practice of data science.</p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <a href="#two" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Projects Tab Section -->
+        <section id="two" class="wrapper style2 special">
+            <header>
+                <h2>My Projects</h2>
+            </header>
+            <div class="tab">
+                <button class="tablinks" onclick="openProject(event, 'CABS')">CABS Report</button>
+                <button class="tablinks" onclick="openProject(event, 'ASD')">ASD in Toddlers</button>
+                <button class="tablinks" onclick="openProject(event, 'DeepRacer')">DeepRacer</button>
+            </div>
+
+            <!-- CABS Report Tab Content -->
+            <div id="CABS" class="tabcontent">
+                <span class="image fit main bottom"><img src="images/dashboard1.jpg" alt="" /></span>
+                <div class="content">
+                    <header>
+                        <h2>CABS Report for the School of Management</h2>
+                    </header>
+                    <p style="text-align: left;">In this project, I utilized the Dimcli library in Python to query
+                        and mine data from the Dimensions.ai website. This data was then analyzed using R and presented with Quarto.
+						I also I developed an interactive dashboard using R and Shiny to benchmark and analyze university research outputs. 
+						The dashboard provides a detailed comparison of selected universities based on several metrics such as citations, altmetric scores
+						and contributions to Sustainable Development Goals (SDGs).
+                    </p> 
+                       <p>The aim was to generate a comprehensive report on the University of Bradford's publications in CABS-listed 
+                        (Chartered Association of Business Schools) journals since 2018 till date. This involved examining publication trends, 
+                        journal rankings, citation data, and researcher profiles. By integrating data from various sources and performing detailed analyses, 
+                        we provided valuable insights into the research outputs and their impact.</p>
+            
+                    <h3>Methodology:</h3>
+            
+                    <h4>Data Collection:</h4>
+                    <ul style="text-align: left;">
+                        <li>Queried the Dimensions database using research IDs from the staff list to collect publication data specific to the University.</li>
+                        <li>Utilized the Dimcli library in Python to query and mine data from the Dimensions.ai website.</li>
+                        <li>Loaded and processed data from CSV files using the here and readr libraries.</li>
+                    </ul>
+            
+                    <h4>Data Analysis:</h4>
+                    <ul style="text-align: left;">
+                        <li>Examined where research was being published, analyzed the number of outputs in different research areas, and identified trends.</li>
+                        <li>Assessed publication frequency in CABS-ranked journals (4* to 1) and compared these to non-CABS journals.</li>
+                        <li>Analyzed citation data and field citation ratios to evaluate the impact of publications in different journal ranks.</li>
+                        <li>Investigated the academic age of researchers to determine if early career researchers tend to publish in lower-ranked journals.</li>
+						<li>Analyzed total and recent citations to understand publication impact.</li>
+                        <li>Compared altmetric scores to gauge the attention received by publications.</li>
+                        <li>Examined research outputs categorized by Fields of Research (FOR).</li>
+                        <li>Evaluated contributions to SDGs.</li>
+                    </ul>
+            
+                    <h4>Altmetric Data:</h4>
+                    <ul style="text-align: left;">
+                        <li>Explored the use of the Altmetrics API to supplement our analysis with additional metrics, although this was secondary to the main analysis.</li>
+                    </ul>
+            
+                    <h4>Code Development:</h4>
+                    <ul style="text-align: left;">
+                        <li>Developed Python scripts to filter and query the required data using the Dimcli library.</li>
+                        <li>Wrote R scripts for data analysis and used Quarto for presenting the findings.</li>
+                    </ul>
+            
+                    <h4>Technologies Used:</h4>
+                    <ul style="text-align: left;">
+                        <li>Python: For querying and mining data from Dimensions.ai using the Dimcli library.</li>
+                        <li>R: For detailed data analysis.</li>
+                        <li>Quarto: For creating and presenting the final report.</li>
+                    </ul>
+            
+                    <h4>Challenges:</h4>
+                    <ul style="text-align: left;">
+                        <li>Managing large datasets and ensuring efficient querying with the Dimcli library.</li>
+                        <li>Combining data from multiple sources and maintaining data integrity throughout the analysis process.</li>
+                    </ul>
+					<h4>Dashboard Development:</h4>
+                    <ul style="text-align: left;">
+                        <li>Developed the user interface with shiny and fluidPage.</li>
+                        <li>Used ggplot2 and plotly for creating interactive visualizations.</li>
+                        <li>Implemented data tables using DT for easy data exploration.</li>
+                    </ul>
+                    <h4>Features:</h4>
+                    <ul style="text-align: left;">
+                        <li>Total vs Recent Citations: Visual comparison of total and recent citations for selected universities.</li>
+                        <li>Altmetric Score Comparison: Median altmetric scores visualized to understand publication impact.</li>
+                        <li>Research Output in Fields: Research outputs categorized by Fields of Research at different levels.</li>
+                        <li>SDG Contributions: Number of publications contributing to various SDGs.</li>
+                        <li>Benchmarking Universities: Comparative table showing selected metrics for each university.</li>
+                    </ul>
+                    <h4>Outcome:</h4>
+                    <p style="text-align: left;">
+                        The report provided valuable insights into the research outputs of the School of Management, highlighting trends, impact metrics, and publication practices. This information is crucial for strategic planning and enhancing the research profile of the University.
+                    </p>
+                    </ul>
+                    <p style="text-align: left;">
+                        For a detailed view of the dashboard shiny app R code, click here to visit my <a href="https://github.com/PearlIsa/CABS-Report-for-the-School-of-Management/tree/main" target="_blank"> GitHub repository</a>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ASD in Toddlers Tab Content -->
+            <div id="ASD" class="tabcontent">
+                <span class="image fit main"><img src="images/Asd_2.jpg" alt="" /></span>
+                <div class="content">
+                    <header>
+                        <h2 style="text-align: center;">Autism Spectrum Disorder (ASD) in toddlers</h2>
+                    </header>
+                    <p style="text-align:left;">
+                    In this above project, I used machine learning to help identify Autism Spectrum Disorder (ASD) in toddlers based on data from 
+                    a Q-Chat-10 survey. The goal was to improve early diagnosis and support timely intervention. 
+                    Using the Design Science Research Methodology (DSRM), I developed a model that classifies toddlers as 
+                    having ASD symptoms or not, based on their responses to specific questions and demographic information.
+                </p>
+                <p style="text-align:left;">
+                    To understand which features were most important for the model, 
+                    I created a bar chart showing the significance of each feature. 
+                    Here's a quick rundown of the top predictors:
+                </p>
+                <ul style="text-align:left;">
+                    <li><strong>A2 (Most Important):</strong> Whether the child points to show things.</li>
+                    <li><strong>A9:</strong> Whether the child looks at the speaker's mouth when they talk.</li>
+                    <li><strong>A7 & A8:</strong> Whether the child uses simple gestures like waving or nodding, and whether they copy words or sounds spontaneously.</li>
+                    <li><strong>A4:</strong> Whether the child shows interest in other children.</li>
+                    <li><strong>A6:</strong> Whether the child plays with toys functionally.</li>
+                    <li><strong>A5:</strong> Whether the child demonstrates imaginative play.</li>
+                    <li><strong>A1:</strong> Whether the child responds to their name being called.</li>
+                </ul>
+                <p>
+                    By highlighting these key features, my model aims to provide valuable insights into early ASD detection, potentially making a significant impact on children's lives.
+                </p>
+                <p>
+                    For more details on the code and visuals, visit my <a href="https://github.com/PearlIsa/DataSciencePortfolio/blob/main/ML/Classification%20of%20Autism%20Spectrum%20Disorder%20(ASD)%20Symptoms%20Using%20ML.ipynb"target="_blank"> GitHub repository</a>.
+                </p>
+            </div>
+            </div>
+
+            <!-- DeepRacer Tab Content -->
+            <div id="DeepRacer" class="tabcontent">
+                <span class="image fit main"><img src="images/deepracer1.jpg" alt="" /></span>
+                <div class="content">
+                    <header>
+                        <h2>AW-Deep-Racer-Student-League</h2>
+                        <p style="text-align: left;">The AWS DeepRacer Student League is where you compete for the fastest lap times with friends, 
+                        training a reinforcement learning (RL) model and see a simulation of how that model performs on a track.</p>
+                    </header>
+                    <p style="text-align: left;">This project includes a reward function used in training an autonomous car with reinforcement learning. 
+                    The function rewards the car based on its proximity to the center of the track, with higher rewards for 
+                    staying closer to the center. Here's a brief overview of how the function works:</p>
+
+                    <ul style="text-align:left;">
+                        <li>The track width and distance from the center are read from the input parameters.</li>
+                        <li>Three markers are calculated at varying distances from the center line (10%, 25%, and 50% of the track width).</li>
+                        <li>The car receives the highest reward if it stays within the first marker, a lower reward if within the second marker, and the lowest reward if within the third marker.</li>
+                        <li>If the car is beyond the third marker, it receives a minimal reward, indicating it's likely off track or crashed.</li>
+                    </ul>
+                    <p style="text-align: left;">For more details on the code and visuals on my models performance, visit my <a href="https://github.com/PearlIsa/AW-Deep-Racer-Student-League/blob/main/AWS%20DEEP%20RACER%20CODE.ipynb" target="_blank"> GitHub repository</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://twitter.com/pearlnoyster" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.linkedin.com/in/ochuwa-pearl-753739a5/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/PearlIsa" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:pearlochisa@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </footer>
     </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function openProject(evt, projectName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = tabcontent[i].className.replace(" show", "");
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(projectName).className += " show";
+            evt.currentTarget.className += " active";
+        }
+
+        // Open the first tab by default
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementsByClassName("tablinks")[0].click();
+        });
+    </script>
 </body>
-</html>
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>Pearl's Data Playground</h2>
-							<p>Data Scientist well versed in Python, R, and Data Visualization.<br />
-							</p>
-						</header>
-						<span class="image"><img src="images/picme.jpg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/AdobeStock1.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2 style="text-align: center;">Welcome!</h2>
-									</header>
-								</div>
-								<div class="col-8 col-12-medium">
-									<p style="text-align: left;">As a passionate Data Scientist, I am dedicated to advancing artificial intelligence and machine learning. 
-									My portfolio showcases my commitment to solving complex data challenges, from optimizing AI models for code generation
-									to insightful data science writing. I have conducted workshops for postgraduate researchers on the ethical implications 
-									of generative AI, emphasizing responsible innovation.</p>
-								
-									<p style="text-align:left;">Explore my projects to see my journey in machine learning model development, including early ASD diagnosis, image classification
-									using CNNs, and fine-tuning a reinforcement learning model for AWS DeepRacer, where I secured a 5th place regional ranking. 
-									Additionally, I developed and optimized machine learning models for predicting used car prices, achieving the lowest RMSE with 
-									a Gradient Boosting Regressor for the KaggleX Skill Assessment Challenge and House price prediction.</p>
-									
-									<p style="text-align:left;">Each project highlights my meticulous analysis, precision in AI solutions, and ability to clearly communicate sophisticated data concepts.
-									Let's connect and share our enthusiasm for the transformative power and ethical practice of data science.</p>
-									
-									<p style="text-align:left;">Let's connect and share our enthusiasm for the transformative power and ethical practice of data science.</p>
-								</div>
-							</div>	
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Two -->
-			<section id="two" class="custom-spotlight-wrapper custom-spotlight-style style2 right special fade-up">
-				<span class="image fit main bottom"><img src="images/dashboard1.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>CABS Report for the School of Management</h2>
-						</header>
-						<p style="text-align: left;">In this project, I utilized the Dimcli library in Python to query
-							and mine data from the Dimensions.ai website. This data was then analyzed using R and presented with Quarto and also on a Shiny app dashboard. 
-							The aim was to generate a comprehensive report on the University of Bradford's publications in CABS-listed 
-							(Chartered Association of Business Schools) journals since 2018 till date. This involved examining publication trends, 
-							journal rankings, citation data, and researcher profiles. By integrating data from various sources and performing detailed analyses, 
-							we provided valuable insights into the research outputs and their impact.</p>
-				
-						<h3>Methodology:</h3>
-				
-						<h4>Data Collection:</h4>
-						<ul style="text-align: left;">
-							<li>Loaded the CABS list of journals and staff list from cabs_list.csv.</li>
-							<li>Queried the Dimensions database using research IDs from the staff list to collect publication data specific to the University of Bradford.</li>
-						</ul>
-				
-						<h4>Data Analysis:</h4>
-						<ul style="text-align: left;">
-							<li>Examined where research was being published, analyzed the number of outputs in different research areas, and identified trends.</li>
-							<li>Assessed publication frequency in CABS-ranked journals (4* to 1) and compared these to non-CABS journals.</li>
-							<li>Analyzed citation data and field citation ratios to evaluate the impact of publications in different journal ranks.</li>
-							<li>Investigated the academic age of researchers to determine if early career researchers tend to publish in lower-ranked journals.</li>
-						</ul>
-				
-						<h4>Altmetric Data:</h4>
-						<ul style="text-align: left;">
-							<li>Explored the use of the Altmetrics API to supplement our analysis with additional metrics, although this was secondary to the main analysis.</li>
-						</ul>
-				
-						<h4>Code Development:</h4>
-						<ul style="text-align: left;">
-							<li>Developed Python scripts to filter and query the required data using the Dimcli library.</li>
-							<li>Wrote R scripts for data analysis and used Quarto for presenting the findings.</li>
-						</ul>
-				
-						<h4>Technologies Used:</h4>
-						<ul style="text-align: left;">
-							<li>Python: For querying and mining data from Dimensions.ai using the Dimcli library.</li>
-							<li>R: For detailed data analysis.</li>
-							<li>Quarto: For creating and presenting the final report.</li>
-						</ul>
-				
-						<h4>Challenges:</h4>
-						<ul style="text-align: left;">
-							<li>Managing large datasets and ensuring efficient querying with the Dimcli library.</li>
-							<li>Combining data from multiple sources and maintaining data integrity throughout the analysis process.</li>
-						</ul>
-				
-						<h4>Outcome:</h4>
-						<p style="text-align: left;">
-							The report provided valuable insights into the research outputs of the School of Management, highlighting trends, impact metrics, and publication practices. This information is crucial for strategic planning and enhancing the research profile of the University.
-						</p>
-				
-						<h3>Portfolio Description:</h3>
-						<p style="text-align: left;">
-							In this project, I developed an interactive dashboard using R and Shiny to benchmark and analyze university research outputs. The dashboard provides a detailed comparison of selected universities based on several metrics such as citations, altmetric scores, and contributions to Sustainable Development Goals (SDGs).
-						</p>
-				
-						<h4>Methodology:</h4>
-						<h5>Data Collection:</h5>
-						<ul style="text-align: left;">
-							<li>Utilized the Dimcli library in Python to query and mine data from the Dimensions.ai website.</li>
-							<li>Loaded and processed data from CSV files using the here and readr libraries.</li>
-						</ul>
-				
-						<h5>Data Analysis:</h5>
-						<ul style="text-align: left;">
-							<li>Analyzed total and recent citations to understand publication impact.</li>
-							<li>Compared altmetric scores to gauge the attention received by publications.</li>
-							<li>Examined research outputs categorized by Fields of Research (FOR).</li>
-							<li>Evaluated contributions to SDGs.</li>
-						</ul>
-				
-						<h5>Dashboard Development:</h5>
-						<ul style="text-align: left;">
-							<li>Developed the user interface with shiny and fluidPage.</li>
-							<li>Used ggplot2 and plotly for creating interactive visualizations.</li>
-							<li>Implemented data tables using DT for easy data exploration.</li>
-						</ul>
-						<h4>Features:</h4>
-						<ul style="text-align: left;">
-							<li>Total vs Recent Citations: Visual comparison of total and recent citations for selected universities.</li>
-							<li>Altmetric Score Comparison: Median altmetric scores visualized to understand publication impact.</li>
-							<li>Research Output in Fields: Research outputs categorized by Fields of Research at different levels.</li>
-							<li>SDG Contributions: Number of publications contributing to various SDGs.</li>
-							<li>Benchmarking Universities: Comparative table showing selected metrics for each university.</li>
-						</ul>
-						<p style="text-align: left;">
-							For a detailed view of the dashboard shiny app R code, click here to visit my <a href="https://github.com/PearlIsa/CABS-Report-for-the-School-of-Management/tree/main" target="_blank"> GitHub repository</a>.
-						</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Three -->
-				<section id="three" class="custom-spotlight-wrapper custom-spotlight-style style3 left special fade-up">
-					<span class="image fit main"><img src="images/Asd_2.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2 style="text-align: center;">Autism Spectrum Disorder (ASD) in toddlers</h2>
-						</header>
-						<p style="text-align:left;">
-						In this above project, I used machine learning to help identify Autism Spectrum Disorder (ASD) in toddlers based on data from 
-						a Q-Chat-10 survey. The goal was to improve early diagnosis and support timely intervention. 
-						Using the Design Science Research Methodology (DSRM), I developed a model that classifies toddlers as 
-						having ASD symptoms or not, based on their responses to specific questions and demographic information.
-					</p>
-					<p style="text-align:left;">
-						To understand which features were most important for the model, 
-						I created a bar chart showing the significance of each feature. 
-						Here's a quick rundown of the top predictors:
-					</p>
-					<ul style="text-align:left;">
-						<li><strong>A2 (Most Important):</strong> Whether the child points to show things.</li>
-						<li><strong>A9:</strong> Whether the child looks at the speaker's mouth when they talk.</li>
-						<li><strong>A7 & A8:</strong> Whether the child uses simple gestures like waving or nodding, and whether they copy words or sounds spontaneously.</li>
-						<li><strong>A4:</strong> Whether the child shows interest in other children.</li>
-						<li><strong>A6:</strong> Whether the child plays with toys functionally.</li>
-						<li><strong>A5:</strong> Whether the child demonstrates imaginative play.</li>
-						<li><strong>A1:</strong> Whether the child responds to their name being called.</li>
-					</ul>
-					<p>
-						By highlighting these key features, my model aims to provide valuable insights into early ASD detection, potentially making a significant impact on children's lives.
-					</p>
-					<p>
-						For more details on the code and visuals, visit my <a href="https://github.com/PearlIsa/DataSciencePortfolio/blob/main/ML/Classification%20of%20Autism%20Spectrum%20Disorder%20(ASD)%20Symptoms%20Using%20ML.ipynb"target="_blank"> GitHub repository</a>.
-					</p>
-					<ul class="actions">
-						<li><a href="#" class="button">Learn More</a></li>
-					</ul>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Four -->
-			<section id="four" class="wrapper style1 special fade-up">
-				<span class="image fit main bottom"><img src="images/deepracer1.jpg" alt="" /></span>
-				<div class="content">
-        <header>
-		</ul><h2>AW-Deep-Racer-Student-League</h2>
-		<p style="text-align: left;">The AWS DeepRacer Student League is where you compete for the fastest lap times with friends, 
-		training a reinforcement learning (RL) model and see a simulation of how that model performs on a track.</p>
-	</header >
-	</ul>
-	<p style="text-align: left;">This project includes a reward function used in training an autonomous car with reinforcement learning. 
-	The function rewards the car based on its proximity to the center of the track, with higher rewards for 
-	staying closer to the center. Here's a brief overview of how the function works:</p>
-
-	<ul style="text-align:left;">
-		<li>The track width and distance from the center are read from the input parameters.</li>
-		<li>Three markers are calculated at varying distances from the center line (10%, 25%, and 50% of the track width).</li>
-		<li>The car receives the highest reward if it stays within the first marker, a lower reward if within the second marker, and the lowest reward if within the third marker.</li>
-		<li>If the car is beyond the third marker, it receives a minimal reward, indicating it's likely off track or crashed.</li>
-	</ul>
-	<p style="text-align: left;">For more details on the code and visuals on my models performance, visit my <a href="https://github.com/PearlIsa/AW-Deep-Racer-Student-League/blob/main/AWS%20DEEP%20RACER%20CODE.ipynb" target="_blank"> GitHub repository</a>.</p>
-	<ul class="actions">
-		<li><a href="#" class="button">Learn More</a></li>
-	</ul>
-</div>
-    <a href="#five" class="goto-next scrolly">Next</a>
-</section>
-
-			
-
-			<!-- 
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Accumsan sed tempus adipiscing blandit</h2>
-							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-chart-area"></span>
-									<h3>Ipsum sed commodo</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>Eleifend lorem ornare</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-flask"></span>
-									<h3>Cubilia cep lobortis</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-paper-plane"></span>
-									<h3>Non semper interdum</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-file"></span>
-									<h3>Odio laoreet accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-lock"></span>
-									<h3>Massa arcu accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-							</div>
-						</div>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="#" class="button">Magna sed feugiat</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>Four -->
-
-			<!--
-				<section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header>
-						<form method="post" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
-							</div>
-						</form>
-					</div>
-				</section> Five -->
-
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://twitter.com/pearlnoyster" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="https://www.linkedin.com/in/ochuwa-pearl-753739a5/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/PearlIsa" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="mailto:pearlochisa@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</footer>
-					
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
 </html>
